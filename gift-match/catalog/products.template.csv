@@ -1,0 +1,7 @@
+id,title,blurb,price,category,image_url,tags,interests,vibes,occasions,recipients,min_budget,unlock_hearts,unlock_photo,active
+example-soy-candle,"Soy candle, oud & amber",Hand-poured soy wax with a warm oud and amber scent.,95,candles,,soy-wax|luxury|handmade,,,,,,,,
+example-custom-name-candle,Custom name candle,A hand-poured candle with their name on the label.,120,candles,,custom|name|romantic,,,,,,,,
+example-photo-candle,Photo label candle,Your photo on the label of a scented candle.,160,candles,,photo|custom,home|selfcare,,anniversary|birthday,partner|friend,100-200,,,
+example-birthday-cake,Birthday cake for two,"A small celebration cake, baked and delivered fresh.",150,cakes,,birthday|celebration,,,,,,,,
+example-custom-message-cake,Custom message cake,Your message piped on a chocolate cake.,220,cakes,,custom|message|birthday|luxury,,,,,,,,
+example-eid-sweets-box,Eid sweets box,"Dates, baklava and chocolates in a gift box.",130,sweets,,eid|baklava|luxury,,,,,,,,

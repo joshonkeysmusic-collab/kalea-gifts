@@ -1,0 +1,172 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://kalea.gifts/schema/product.json",
+  "title": "Kalea Gifts product",
+  "description": "One gift in the catalogue. Only title, price and category are required; the rest is generated from the category and tags. Fields you set replace what would be generated.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "title",
+    "price",
+    "category"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9-]{0,63}$",
+      "description": "Unique slug. Generated from the title if left out."
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 60
+    },
+    "blurb": {
+      "type": "string",
+      "maxLength": 140,
+      "description": "One short line shown under the title."
+    },
+    "price": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 20000,
+      "description": "Whole AED, gift wrap not included."
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "coffee",
+        "selfcare",
+        "flowers",
+        "beauty",
+        "wellness",
+        "home",
+        "books",
+        "treats",
+        "tech",
+        "travel",
+        "candles",
+        "cakes",
+        "sweets",
+        "experiences",
+        "personalised"
+      ]
+    },
+    "imageUrl": {
+      "type": "string",
+      "pattern": "^(https://\\S+|/(?!/)\\S*)$",
+      "description": "https link or a site path starting with one slash."
+    },
+    "tags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Free-form labels. Known tags (candle, cake, birthday, eid, luxury, custom...) set rules automatically."
+    },
+    "interests": {
+      "type": "array",
+      "maxItems": 3,
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "enum": [
+          "coffee",
+          "selfcare",
+          "flowers",
+          "beauty",
+          "wellness",
+          "home",
+          "books",
+          "treats",
+          "tech",
+          "travel"
+        ]
+      },
+      "description": "Overrides generated interests (+3 each in scoring)."
+    },
+    "vibes": {
+      "type": "array",
+      "maxItems": 3,
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "enum": [
+          "cozy",
+          "elegant",
+          "joyful",
+          "romantic",
+          "minimal",
+          "natural"
+        ]
+      },
+      "description": "Overrides generated vibes (+2 each)."
+    },
+    "occasions": {
+      "type": "array",
+      "maxItems": 3,
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "enum": [
+          "birthday",
+          "thankyou",
+          "celebration",
+          "newbeginning",
+          "anniversary",
+          "justbecause"
+        ]
+      },
+      "description": "Occasions that get a +1 boost."
+    },
+    "recipients": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "enum": [
+          "partner",
+          "friend",
+          "family",
+          "colleague",
+          "other"
+        ]
+      },
+      "description": "Only offered for these recipients. Leave out for everyone."
+    },
+    "minBudget": {
+      "type": "string",
+      "enum": [
+        "u100",
+        "100-200",
+        "200-300",
+        "300-500",
+        "500+"
+      ],
+      "description": "Hide from budgets below this tier."
+    },
+    "unlock": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "hearts": {
+          "enum": [
+            1,
+            2,
+            3
+          ],
+          "description": "Show only at this personalisation level or higher."
+        },
+        "photo": {
+          "type": "boolean",
+          "description": "Show only when the buyer uploaded a photo."
+        }
+      }
+    },
+    "active": {
+      "type": "boolean",
+      "default": true,
+      "description": "false hides the product."
+    }
+  }
+}

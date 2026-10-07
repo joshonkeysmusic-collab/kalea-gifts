@@ -1,0 +1,88 @@
+{
+  "products": [
+    {
+      "id": "example-soy-candle",
+      "title": "Soy candle, oud & amber",
+      "blurb": "Hand-poured soy wax with a warm oud and amber scent.",
+      "price": 95,
+      "category": "candles",
+      "tags": [
+        "soy-wax",
+        "luxury",
+        "handmade"
+      ]
+    },
+    {
+      "id": "example-custom-name-candle",
+      "title": "Custom name candle",
+      "blurb": "A hand-poured candle with their name on the label.",
+      "price": 120,
+      "category": "candles",
+      "tags": [
+        "custom",
+        "name",
+        "romantic"
+      ]
+    },
+    {
+      "id": "example-photo-candle",
+      "title": "Photo label candle",
+      "blurb": "Your photo on the label of a scented candle.",
+      "price": 160,
+      "category": "candles",
+      "tags": [
+        "photo",
+        "custom"
+      ],
+      "interests": [
+        "home",
+        "selfcare"
+      ],
+      "occasions": [
+        "anniversary",
+        "birthday"
+      ],
+      "recipients": [
+        "partner",
+        "friend"
+      ],
+      "minBudget": "100-200"
+    },
+    {
+      "id": "example-birthday-cake",
+      "title": "Birthday cake for two",
+      "blurb": "A small celebration cake, baked and delivered fresh.",
+      "price": 150,
+      "category": "cakes",
+      "tags": [
+        "birthday",
+        "celebration"
+      ]
+    },
+    {
+      "id": "example-custom-message-cake",
+      "title": "Custom message cake",
+      "blurb": "Your message piped on a chocolate cake.",
+      "price": 220,
+      "category": "cakes",
+      "tags": [
+        "custom",
+        "message",
+        "birthday",
+        "luxury"
+      ]
+    },
+    {
+      "id": "example-eid-sweets-box",
+      "title": "Eid sweets box",
+      "blurb": "Dates, baklava and chocolates in a gift box.",
+      "price": 130,
+      "category": "sweets",
+      "tags": [
+        "eid",
+        "baklava",
+        "luxury"
+      ]
+    }
+  ]
+}
